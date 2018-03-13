@@ -246,4 +246,7 @@ http://www.linuxidc.com/Linux/2016-07/133128.htm
 http://blog.csdn.net/qq_26847293/article/details/48489999
 
 22.mysql的安装：
-http://www.linuxidc.com/Linux/2017-05/143864.htm
+http://www.linuxidc.com/Linux/2017-05/143864.
+
+23.IntelliJ IDEA常用快捷键汇总
+http://blog.csdn.net/wei83523408/article/details/60472168

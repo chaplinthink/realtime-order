@@ -93,7 +93,6 @@ public class SaveMysqlBolt extends BaseBasicBolt {
             //将memberMap所有数据copy过来
             tmpMap.putAll(memberMap);
             memberMap = new HashMap<String, String>();
-
             saveMysql(tmpMap);
         }
     }
@@ -138,8 +137,14 @@ public class SaveMysqlBolt extends BaseBasicBolt {
                 StringBuffer  stringBuffer = new StringBuffer();
                 
                 if(id==0){ //insert
-
+                     stringBuffer.append("insert into total_order(order_nums,p_total_price,y_total_price,order_member,sendpay) values(")
+                             .append(order_nums+","+p_total_price+","+y_total_price+","+order_member+",'"+key+"')");
                 }else{ //update
+                    stringBuffer.append("update total_order　set order_nums="+order_nums)
+                    .append(",p_total_price="+p_total_price)
+                    .append(",y_total_price="+y_total_price)
+                    .append(",order_member="+order_member)
+                    .append(" where id="+id);
 
                 }
 
