@@ -32,11 +32,12 @@ strom + kafka+ memcached/redis + mysql + zk 锁
 
 ```
 ./zkCli.sh  -server localhost:2181
-```
->WatchedEvent state:SyncConnected type:None path:null
+
+
+WatchedEvent state:SyncConnected type:None path:null
 [zk: localhost:2181(CONNECTED) 0] ls /
 [cluster, controller_epoch, controller, storm, brokers, zookeeper, admin, isr_change_notification, consumers, log_dir_event_notification, latest_producer_id_block, config]
-[zk: localhost:2181(CONNECTED) 1] 
+```
 
 查看kafka brokers 的节点有几个：
 
@@ -175,78 +176,3 @@ message:
 ```
 ./storm  jar KafkaStormOptr.jar com.ks.topology.CounterTopology 
 ```
-
-## 参考资料
-
-1.Storm集群的安装配置
-
-https://www.cnblogs.com/freeweb/p/5179410.html
-
-2.Zookeeper常用命令
-http://blog.csdn.net/xiaolang85/article/details/13021339/
-
-3.storm基础概念
-http://blog.csdn.net/wust__wangfan/article/details/50412695
-
-4.Topology的并行度
-http://blog.csdn.net/wust__wangfan/article/details/50417801
-
-5.消息的可靠处理
-http://blog.csdn.net/wust__wangfan/article/details/50419871
-
-6.异或运算
-https://baike.baidu.com/item/%E5%BC%82%E6%88%96/10993677?fr=aladdin
-
-7.Kafka的基本结构和概念
-http://blog.csdn.net/zuoanyinxiang/article/details/50890322
-
-8.Kafka+Storm+HDFS整合实践
-http://shiyanjun.cn/archives/934.html
-
-9.Maven依赖中的scope详解
-http://blog.csdn.net/kimylrong/article/details/50353161
-
-10.linux awk命令详解
-https://www.cnblogs.com/jacob-tian/p/6110606.html
-
-11.storm集群启动/停止脚本
-http://blog.csdn.net/zz657114506/article/details/54429965
-
-12.linux标准输入输出2>&1
-https://www.cnblogs.com/jacob-tian/p/6110606.html
-
-13.storm 集成kafka时遇见的问题
-http://blog.csdn.net/fenghuibian/article/details/54380263
-
-14.JStorm/Storm的调试：本地运行模式
-http://blog.csdn.net/u010010428/article/details/51746712
-
-15.Linux下的Memcache安装
-http://kimi.it/257.html
-
-16.使用Xmemcached客户端操作Memcached缓存系统
-http://blog.csdn.net/l569590478/article/details/51332322
-
-17.memcached 常用命令及使用说明
-https://www.cnblogs.com/wayne173/p/5652034.html
-
-18.java之XMemcached使用及源码详解
-http://blog.csdn.net/tang9140/article/details/43445511
-
-XMemcached:
-https://github.com/killme2008/xmemcached/wiki/%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8
-
-19.将下载的jar安装到本地仓库 ，然后在项目pom.xml 里直接引用
-http://blog.csdn.net/l1028386804/article/details/48440723
-
-20.Ubuntu下安装MySQL及简单操作
-http://www.linuxidc.com/Linux/2016-07/133128.htm
-
-21.conn.setAutoCommit(true)和(false)的区别
-http://blog.csdn.net/qq_26847293/article/details/48489999
-
-22.mysql的安装：
-http://www.linuxidc.com/Linux/2017-05/143864.
-
-23.IntelliJ IDEA常用快捷键汇总
-http://blog.csdn.net/wei83523408/article/details/60472168
