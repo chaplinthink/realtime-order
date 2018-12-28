@@ -167,11 +167,9 @@ message:
 
 ## 程序打包与运行
 
-打包：
+打包： mvn clean package
 
-运行：
-
-编写好 CounterTopology 打包 放到 storm 的bin下
+运行： 编写好 CounterTopology 打包 放到 storm 的bin下
 
 ```
 ./storm  jar KafkaStormOptr.jar com.ks.topology.CounterTopology 
